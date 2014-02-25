@@ -1,9 +1,16 @@
 var Package = {
   rate: function() {
     var distanceCost = (this.distance / 10) * 1;
+    var international = document.getElementById("international").checked;
     var result;
 
-    return Math.round(distanceCost) + this.weight;
+    if (international) {
+      result = Math.round(distanceCost) + this.weight + 50;
+    } else {
+      result = Math.round(distanceCost) + this.weight;
+    }
+
+    return result;
     
 }
 };

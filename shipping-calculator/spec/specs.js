@@ -10,7 +10,7 @@ describe("Package", function () {
       var testRate = Object.create(Package);
       testRate.distance = 200;
       testRate.weight = 2;
-      testRate.international = false;
+      testRate.international = true;
       testRate.rate().should.equal(72);
     });
   });
